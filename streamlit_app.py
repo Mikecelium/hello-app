@@ -6,7 +6,7 @@ st.title('Project Details')
 
 #openai_api_key = st.sidebar.text_input('OpenAI API Key')
 
-openai_api_key = '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'
+openai_api_key = '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'
 
 def generate_response(input_text):
   llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
