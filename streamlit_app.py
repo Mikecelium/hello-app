@@ -34,7 +34,11 @@ st.title('Project Details')
 
 openai_api_key = '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'
 
-print(os.environ["key"])
+key_1 = os.environ["key"])
+
+print(key_1)
+
+print(st.secrets)
 
 def generate_response(input_text):
   llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
