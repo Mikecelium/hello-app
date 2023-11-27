@@ -41,14 +41,22 @@ with st.form('my_form'):
   text = st.text_area('Enter text:', 'Im making motion graphics fro a 10 minute youtube video')
   submitted = st.form_submit_button('Submit')
 
-res2 = chat(messages.HumanMessage(text))
 
+
+messages2 = [
+    SystemMessage(content="You are a helpful assistant."),
+    HumanMessage(content="Hi AI, how are you today?"),
+    AIMessage(content="I'm great thank you. How can I help you?"),
+    HumanMessage(content=text)
+]
+
+res2 = chat(messages2)
 st.write(res2)
 
 
 
 
-
+'''
 
 def generate_response(input_text):
   llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
@@ -63,3 +71,5 @@ with st.form('my_form'):
     generate_response(text)
 
 st.write('Yoooooo Romano NASA Time!')
+
+'''
