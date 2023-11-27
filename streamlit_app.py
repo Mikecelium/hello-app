@@ -25,14 +25,14 @@ messages2 = [
     SystemMessage(content="You are a helpful assistant trying to create questions to narrow down costs and timeframes for a client project consisting of:" +  "continue asking questions until you have a reasonable idea of the project, ask the most important questions first. Once the User inputs 'Finished' output the project description and answers to questions in a way compatible with prompting an LLM to produce a cost "),
     HumanMessage(content="Hi AI, how are you today?"),
     AIMessage(content="I'm great thank you. Can you tell me more about the project?"),
-    HumanMessage(content= input_text)
+    
     ]
 
 messages3 = [
     SystemMessage(content="You are a helpful assistant trying to create questions to narrow down the cost and efficiency of a worker/freelancer, continue asking questions until you have a reasonable idea of what the person is capable of and what resources they have avaliable, ask the most important questions first. Once the User inputs 'Finished' output the project description and answers to questions in a way compatible with prompting an LLM to produce a cost when linked with a project description "),
     HumanMessage(content="Hi AI, how are you today?"),
-    AIMessage(content="I'm great thank you. Can you tell me more about the project?"),
-    HumanMessage(content= input_text)
+    AIMessage(content="I'm great thank you. Can you tell me more about the project?")
+    
     ]
 
 def generate_response2(input_text):
@@ -42,6 +42,13 @@ def generate_response2(input_text):
             openai_api_key = key_1,
             model='gpt-3.5-turbo'
     )
+
+    messages2 = [
+    SystemMessage(content="You are a helpful assistant trying to create questions to narrow down costs and timeframes for a client project consisting of:" +  "continue asking questions until you have a reasonable idea of the project, ask the most important questions first. Once the User inputs 'Finished' output the project description and answers to questions in a way compatible with prompting an LLM to produce a cost "),
+    HumanMessage(content="Hi AI, how are you today?"),
+    AIMessage(content="I'm great thank you. Can you tell me more about the project?"),
+    HumanMessage(content= input_text)
+    ]
     
     
     res2 = chat(messages2)
@@ -57,6 +64,15 @@ def generate_response3(input_text):
             openai_api_key = key_1,
             model='gpt-3.5-turbo'
     )
+
+    messages3 = [
+    SystemMessage(content="You are a helpful assistant trying to create questions to narrow down the cost and efficiency of a worker/freelancer, continue asking questions until you have a reasonable idea of what the person is capable of and what resources they have avaliable, ask the most important questions first. Once the User inputs 'Finished' output the project description and answers to questions in a way compatible with prompting an LLM to produce a cost when linked with a project description "),
+    HumanMessage(content="Hi AI, how are you today?"),
+    AIMessage(content="I'm great thank you. Can you tell me more about the project?"),
+    HumanMessage(content= input_text)
+    ]
+
+    
     
     
     res2 = chat(messages3)
