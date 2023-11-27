@@ -30,14 +30,14 @@ def generate_response(input_text):
     )
     
     messages2 = [
-    SystemMessage(content="You are a helpful assistant trying to create questions to narrow down costs and timeframes for a client project, continue asking questions until you have a reasonable idea of the project, ask the most important questions first. Once the User inputs 'Finished' output the project description and answers to questions in a way compatible with prompting an LLM to produce a cost "),
+    SystemMessage(content="You are a helpful assistant trying to create questions to narrow down costs and timeframes for a client project consisting of:" +  "continue asking questions until you have a reasonable idea of the project, ask the most important questions first. Once the User inputs 'Finished' output the project description and answers to questions in a way compatible with prompting an LLM to produce a cost "),
     HumanMessage(content="Hi AI, how are you today?"),
     AIMessage(content="I'm great thank you. Can you tell me more about the project?"),
     HumanMessage(content= input_text)
     ]
     
     res2 = chat(messages2)
-    st.write(res2)
+    st.write(res2.content)
 
     return res2
 
@@ -58,7 +58,7 @@ def generate_response2(input_text):
     ]
     
     res2 = chat(messages2)
-    st.write(res2)
+    st.write(res2.content)
 
     return res2
 
