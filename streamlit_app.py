@@ -18,7 +18,7 @@ messages = [
 ]
 
 chat = ChatOpenAI(
-    openai_api_key = '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',
+    openai_api_key = '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',
     model='gpt-3.5-turbo'
 )
 
