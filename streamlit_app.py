@@ -22,6 +22,8 @@ chat = ChatOpenAI(
     model='gpt-3.5-turbo'
 )
 
+res = chat(messages)
+
 
 
 st.title('Project Details')
