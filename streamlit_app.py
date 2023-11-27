@@ -28,6 +28,8 @@ res = chat(messages)
 
 print(res)
 
+st.write(res)
+
 
 
 st.title('Project Details')
