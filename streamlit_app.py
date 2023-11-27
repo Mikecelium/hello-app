@@ -51,7 +51,7 @@ st.title('Project Details')
 with st.form('my_form'):
   text = st.text_area('Enter text:', 'Im making motion graphics fro a 10 minute youtube video')
   submitted = st.form_submit_button('Submit')
-  if submitted and openai_api_key.startswith('sk-'):
+  if submitted and key_1.startswith('sk-'):
     generate_response(text)
 
 
