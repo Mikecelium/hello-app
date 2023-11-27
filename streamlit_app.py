@@ -2,6 +2,28 @@
 import streamlit as st
 from langchain.llms import OpenAI
 
+from langchain.schema import (
+    SystemMessage,
+    HumanMessage,
+    AIMessage
+)
+
+from langchain.chat_models import ChatOpenAI
+
+messages = [
+    SystemMessage(content="You are a helpful assistant."),
+    HumanMessage(content="Hi AI, how are you today?"),
+    AIMessage(content="I'm great thank you. How can I help you?"),
+    HumanMessage(content="I'd like to understand string theory.")
+]
+
+chat = ChatOpenAI(
+    openai_api_key=os.environ["OPENAI_API_KEY"],
+    model='gpt-3.5-turbo'
+)
+
+
+
 st.title('Project Details')
 
 #openai_api_key = st.sidebar.text_input('OpenAI API Key')
