@@ -34,7 +34,7 @@ st.title('Project Details')
 
 openai_api_key = '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'
 
-key_1 = os.environ["key"])
+key_1 = (os.environ["key"])
 
 print(key_1)
 
