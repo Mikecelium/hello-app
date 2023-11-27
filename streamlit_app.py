@@ -12,6 +12,8 @@ from langchain.chat_models import ChatOpenAI
 
 key_1 = (os.environ["key"])
 
+
+
 messages = [
     SystemMessage(content="You are a helpful assistant."),
     HumanMessage(content="Hi AI, how are you today?"),
@@ -26,9 +28,7 @@ chat = ChatOpenAI(
 
 res = chat(messages)
 
-print(res)
-
-st.write(res)
+st.write(print(res))
 
 
 
@@ -36,15 +36,19 @@ st.title('Project Details')
 
 #openai_api_key = st.sidebar.text_input('OpenAI API Key')
 
-openai_api_key = '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'
+
+with st.form('my_form'):
+  text = st.text_area('Enter text:', 'Im making motion graphics fro a 10 minute youtube video')
+  submitted = st.form_submit_button('Submit')
+
+res2 = chat(messages.HumanMessage(text))
+
+st.write(res2)
 
 
 
 
 
-st.write(key_1)
-
-st.write(st.secrets)
 
 def generate_response(input_text):
   llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
