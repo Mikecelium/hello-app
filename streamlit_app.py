@@ -40,6 +40,10 @@ print(key_1)
 
 print(st.secrets)
 
+st.write(key_1)
+
+st.write(st.secrets)
+
 def generate_response(input_text):
   llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
   st.info(llm(input_text))
