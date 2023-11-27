@@ -18,11 +18,13 @@ messages = [
 ]
 
 chat = ChatOpenAI(
-    openai_api_key = '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',
+    openai_api_key = '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',
     model='gpt-3.5-turbo'
 )
 
 res = chat(messages)
+
+print(res)
 
 
 
