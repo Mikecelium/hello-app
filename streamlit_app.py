@@ -10,15 +10,17 @@ from langchain.schema import (
 
 from langchain.chat_models import ChatOpenAI
 
+key_1 = (os.environ["key"])
+
 messages = [
     SystemMessage(content="You are a helpful assistant."),
     HumanMessage(content="Hi AI, how are you today?"),
     AIMessage(content="I'm great thank you. How can I help you?"),
     HumanMessage(content="I'd like to understand string theory.")
 ]
-'''
+
 chat = ChatOpenAI(
-    openai_api_key = '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',
+    openai_api_key = key_1,
     model='gpt-3.5-turbo'
 )
 
@@ -26,7 +28,7 @@ res = chat(messages)
 
 print(res)
 
-'''
+
 
 st.title('Project Details')
 
@@ -34,11 +36,9 @@ st.title('Project Details')
 
 openai_api_key = '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'
 
-key_1 = (os.environ["key"])
 
-print(key_1)
 
-print(st.secrets)
+
 
 st.write(key_1)
 
