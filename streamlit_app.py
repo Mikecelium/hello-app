@@ -90,13 +90,14 @@ st.title('Project Details')
 
 
 with st.form('my_form'):
-  text = st.text_area('Enter text:', 'Im making motion graphics fro a 10 minute youtube video')
+  text = st.text_area('Enter text:', 'Im making motion graphics for a 10 minute youtube video')
   submitted = st.form_submit_button('Submit')
   if submitted and key_1.startswith('sk-'):
     res = generate_response2(text)
 
     messages2.append(res)
-    
+
+st.title('Your Experience')
 
 with st.form('my_form2'):
   text = st.text_area('Enter text:', 'Im a video graphic designer')
