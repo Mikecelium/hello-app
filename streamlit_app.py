@@ -22,21 +22,20 @@ messages = [
 ]
 
 def generate_response(input_text):
-  llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
-  st.info(llm(input_text))
+  
 
     chat = ChatOpenAI(
-        openai_api_key = key_1,
-        model='gpt-3.5-turbo'
+            openai_api_key = key_1,
+            model='gpt-3.5-turbo'
     )
-
+    
     messages2 = [
     SystemMessage(content="You are a helpful assistant."),
     HumanMessage(content="Hi AI, how are you today?"),
     AIMessage(content="I'm great thank you. How can I help you?"),
     HumanMessage(content= input_text)
     ]
-
+    
     res2 = chat(messages2)
     st.write(res2)
 
