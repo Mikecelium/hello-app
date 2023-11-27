@@ -56,6 +56,12 @@ with st.form('my_form'):
   if submitted and key_1.startswith('sk-'):
     generate_response(text)
 
+with st.form('my_form2'):
+  text = st.text_area('Enter text:', 'I'm a video graphic designer')
+  submitted = st.form_submit_button('Submit')
+  if submitted and key_1.startswith('sk-'):
+    generate_response(text)
+
 
 
 
