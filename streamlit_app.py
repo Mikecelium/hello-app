@@ -16,7 +16,7 @@ messages = [
     AIMessage(content="I'm great thank you. How can I help you?"),
     HumanMessage(content="I'd like to understand string theory.")
 ]
-
+'''
 chat = ChatOpenAI(
     openai_api_key = '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',
     model='gpt-3.5-turbo'
@@ -26,13 +26,15 @@ res = chat(messages)
 
 print(res)
 
-
+'''
 
 st.title('Project Details')
 
 #openai_api_key = st.sidebar.text_input('OpenAI API Key')
 
 openai_api_key = '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'
+
+print(os.environ["openai"])
 
 def generate_response(input_text):
   llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
