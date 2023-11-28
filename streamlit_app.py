@@ -65,7 +65,7 @@ messages4 = [
     SystemMessage(content="You are a helpful assistant trying to find the nearest major metropolitan urban center to a specified address, if the address is further than 100km away from the center you can call it rural and if it is further than 300km away from the nearest urban center you can call it remote "),
     HumanMessage(content="Hi AI, how are you today?"),
     AIMessage(content="I'm great thank you. Could you provide me with the address you'll be working from?"),
-    HumanMessage(content= street + city + province + country )
+    HumanMessage(content= street + city + province + country +" What is the closest city to this, just the exact title without any extra text if possible, thank you" )
     
     ]
 
