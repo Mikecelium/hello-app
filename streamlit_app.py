@@ -64,7 +64,7 @@ messages3 = [
 messages4 = [
     SystemMessage(content="You are a helpful assistant trying to find the nearest major metropolitan urban center to a specified address, if the address is further than 100km away from the center you can call it rural and if it is further than 300km away from the nearest urban center you can call it remote "),
     HumanMessage(content="Hi AI, how are you today?"),
-    AIMessage(content="I'm great thank you. Could you provide me with the address you'll be working from?")
+    AIMessage(content="I'm great thank you. Could you provide me with the address you'll be working from?"),
     HumanMessage(content= street + city + province + country )
     
     ]
@@ -114,6 +114,24 @@ def generate_response3(input_text):
 
     return res2
 
+def generate_response4():
+  
+
+    chat = ChatOpenAI(
+            openai_api_key = key_1,
+            model='gpt-3.5-turbo'
+    )
+
+    
+
+    
+    
+    
+    res4 = chat(messages4)
+    st.write(res4.content)
+
+    return res4
+
     
 
 
@@ -146,6 +164,11 @@ with st.form('my_form2'):
     res = generate_response3(text)
 
     messages3.append(res)
+
+
+st.title('Closest Major City (Proximity')
+
+st.write(generate_response4().content)
 
 
 
