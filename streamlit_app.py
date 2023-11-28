@@ -93,6 +93,8 @@ with st.form('my_form'):
   text = st.text_area('Enter text:', 'Im making motion graphics for a 10 minute youtube video')
   submitted = st.form_submit_button('Submit')
   if submitted and key_1.startswith('sk-'):
+
+    messages2.append(text)
     res = generate_response2(text)
 
     messages2.append(res)
@@ -103,6 +105,10 @@ with st.form('my_form2'):
   text = st.text_area('Enter text:', 'Im a video graphic designer')
   submitted = st.form_submit_button('Submit')
   if submitted and key_1.startswith('sk-'):
+
+
+    messages3.append(text)
+    
     res = generate_response3(text)
 
     messages3.append(res)
